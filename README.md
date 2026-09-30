@@ -2,6 +2,9 @@
 
 Better 是一个原生 macOS 决策工具。它不维护无限 Todo，而是强制执行三个边界：最多三条 7/14 天滚动押注、每天一个唯一焦点、每次行动都要提前写下预期证据。
 
+[构建与运行](#运行) · [产品规格](docs/product-spec.md) ·
+[核心验证](#验证)
+
 首次从 `Better.app` 启动时，应用会默认注册为 macOS 登录项，让菜单栏入口随登录可用。可以在“提醒与启动”中随时关闭；自动启动不会创建焦点或开始计时。
 
 侧边栏的“图标实验室”可以逐个预览并即时替换内置图标。选择只保存在 `UserDefaults`，下次启动恢复，不会修改押注、焦点或 `better.json`。
@@ -37,6 +40,7 @@ Git 变化只表示实现活动。clean working tree 或新增提交不代表已
 需要 macOS 14 或更高版本，以及 Swift 6。
 
 ```bash
+git clone https://github.com/majiayu000/better-macos.git
 cd better-macos
 ./scripts/build-app.sh
 open dist/Better.app
